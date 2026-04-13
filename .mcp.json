@@ -1,0 +1,25 @@
+{
+  "name": "linkedin-outreach-mcp",
+  "description": "MEOK AI Labs \u2014 AI-powered content generation for LinkedIn outreach. Helps sales teams and",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/linkedin-outreach-mcp",
+  "runtime": "python",
+  "entrypoint": "server.py",
+  "tools": [
+    "generate_connection_request",
+    "generate_inmessage",
+    "generate_post",
+    "analyze_profile",
+    "generate_outreach_sequence",
+    "generate_comment"
+  ],
+  "categories": [
+    "Sales",
+    "Social Media"
+  ],
+  "pricing": {
+    "free": "50 calls/day",
+    "pro": "$9/mo"
+  }
+}
