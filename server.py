@@ -54,8 +54,7 @@ def _build_connection_request(
     title: str,
     company: str,
     shared_interests: str,
-    context: str = "",
-) -> dict:
+    context: str = "") -> dict:
     """Generate a personalized LinkedIn connection request (max 300 chars)."""
     first_name = name.strip().split()[0] if name.strip() else "there"
 
@@ -130,8 +129,7 @@ def _build_inmessage(
     recipient_title: str,
     conversation_context: str,
     goal: str,
-    tone: str = "professional",
-) -> dict:
+    tone: str = "professional") -> dict:
     """Generate a LinkedIn InMail or direct message."""
     first_name = recipient_name.strip().split()[0] if recipient_name.strip() else "there"
     tone = tone.lower().strip()
@@ -208,8 +206,7 @@ def _build_inmessage(
 def _build_post(
     topic: str,
     key_points: str,
-    style: str = "thought-leadership",
-) -> dict:
+    style: str = "thought-leadership") -> dict:
     """Generate an engaging LinkedIn post with hashtags."""
     style = style.lower().strip()
     valid_styles = ("thought-leadership", "announcement", "question", "story")
@@ -469,9 +466,9 @@ def _infer_pain_points(industry: str, seniority: str) -> list[str]:
         points.append("Board/investor reporting and strategic alignment")
     elif seniority in ("Director", "Senior"):
         points.append("Cross-functional alignment and execution speed")
-    elif seniority in ("Manager",):
+    elif seniority in ("Manager"):
         points.append("Developing team members while hitting targets")
-    elif seniority in ("Junior / Entry",):
+    elif seniority in ("Junior / Entry"):
         points.append("Career growth and visibility within the organization")
 
     return points
@@ -514,8 +511,7 @@ def _build_outreach_sequence(
     target_title: str,
     target_company: str,
     target_industry: str,
-    goal: str,
-) -> dict:
+    goal: str) -> dict:
     """Generate a 5-touch outreach sequence with timing."""
     first_name = target_name.strip().split()[0] if target_name.strip() else "there"
     industry = target_industry or _infer_industry(target_title)
@@ -715,8 +711,7 @@ mcp = FastMCP(
         "and multi-touch outreach sequences. Does NOT scrape or automate LinkedIn -- "
         "it's a content assistant that helps humans write better messages. "
         "By MEOK AI Labs."
-    ),
-)
+    ))
 
 
 @mcp.tool()
@@ -725,8 +720,7 @@ def generate_connection_request(
     title: str = "",
     company: str = "",
     shared_interests: str = "",
-    context: str = "",
-) -> dict:
+    context: str = "") -> dict:
     """Generate a personalized LinkedIn connection request (max 300 characters).
 
     Returns 3 variants to choose from. Edit and personalize before sending.
@@ -750,8 +744,7 @@ def generate_inmessage(
     recipient_title: str = "",
     conversation_context: str = "",
     goal: str = "",
-    tone: str = "professional",
-) -> dict:
+    tone: str = "professional") -> dict:
     """Generate a professional LinkedIn InMail or direct message.
 
     Args:
@@ -771,8 +764,7 @@ def generate_inmessage(
 def generate_post(
     topic: str,
     key_points: str = "",
-    style: str = "thought-leadership",
-) -> dict:
+    style: str = "thought-leadership") -> dict:
     """Generate an engaging LinkedIn post with hashtags.
 
     Args:
@@ -810,8 +802,7 @@ def generate_outreach_sequence(
     target_title: str = "",
     target_company: str = "",
     target_industry: str = "",
-    goal: str = "",
-) -> dict:
+    goal: str = "") -> dict:
     """Generate a 5-touch LinkedIn outreach sequence with timing recommendations.
 
     Sequence: connection request -> value message -> case study -> soft ask -> direct ask.
