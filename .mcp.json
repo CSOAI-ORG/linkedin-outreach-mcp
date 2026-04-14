@@ -1,25 +1,139 @@
 {
   "name": "linkedin-outreach-mcp",
-  "description": "MEOK AI Labs \u2014 AI-powered content generation for LinkedIn outreach. Helps sales teams and",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/linkedin-outreach-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Sovereign AI tools for everyone.",
+  "version": "1.0.0",
   "tools": [
-    "generate_connection_request",
-    "generate_inmessage",
-    "generate_post",
-    "analyze_profile",
-    "generate_outreach_sequence",
-    "generate_comment"
-  ],
-  "categories": [
-    "Sales",
-    "Social Media"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "generate_connection_request",
+      "description": "Generate a personalized LinkedIn connection request (max 300 characters).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "company": {
+            "type": "string"
+          },
+          "shared_interests": {
+            "type": "string"
+          },
+          "context": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name"
+        ]
+      }
+    },
+    {
+      "name": "generate_inmessage",
+      "description": "Generate a professional LinkedIn InMail or direct message.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "recipient_name": {
+            "type": "string"
+          },
+          "recipient_title": {
+            "type": "string"
+          },
+          "conversation_context": {
+            "type": "string"
+          },
+          "goal": {
+            "type": "string"
+          },
+          "tone": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "recipient_name"
+        ]
+      }
+    },
+    {
+      "name": "generate_post",
+      "description": "Generate an engaging LinkedIn post with hashtags.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "topic": {
+            "type": "string"
+          },
+          "key_points": {
+            "type": "string"
+          },
+          "style": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "topic"
+        ]
+      }
+    },
+    {
+      "name": "analyze_profile",
+      "description": "Analyze a LinkedIn profile description to extract actionable outreach insights.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "profile_text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "profile_text"
+        ]
+      }
+    },
+    {
+      "name": "generate_outreach_sequence",
+      "description": "Generate a 5-touch LinkedIn outreach sequence with timing recommendations.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "target_name": {
+            "type": "string"
+          },
+          "target_title": {
+            "type": "string"
+          },
+          "target_company": {
+            "type": "string"
+          },
+          "target_industry": {
+            "type": "string"
+          },
+          "goal": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "target_name"
+        ]
+      }
+    },
+    {
+      "name": "generate_comment",
+      "description": "Generate an insightful comment for a LinkedIn post.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "post_content": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "post_content"
+        ]
+      }
+    }
+  ]
 }

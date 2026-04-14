@@ -16,6 +16,11 @@ Install: pip install mcp
 Run:     python server.py
 """
 
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import json
 import re
 from collections import defaultdict
@@ -720,7 +725,7 @@ def generate_connection_request(
     title: str = "",
     company: str = "",
     shared_interests: str = "",
-    context: str = "") -> dict:
+    context: str = "", api_key: str = "") -> dict:
     """Generate a personalized LinkedIn connection request (max 300 characters).
 
     Returns 3 variants to choose from. Edit and personalize before sending.
@@ -732,6 +737,10 @@ def generate_connection_request(
         shared_interests: Comma-separated shared interests or topics
         context: Optional extra context (e.g. "met at SaaStr conference")
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
@@ -744,7 +753,7 @@ def generate_inmessage(
     recipient_title: str = "",
     conversation_context: str = "",
     goal: str = "",
-    tone: str = "professional") -> dict:
+    tone: str = "professional", api_key: str = "") -> dict:
     """Generate a professional LinkedIn InMail or direct message.
 
     Args:
@@ -754,6 +763,10 @@ def generate_inmessage(
         goal: What you want to achieve (e.g. "book a demo call", "discuss job opportunity")
         tone: Message tone -- one of: casual, professional, sales, recruiting
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
@@ -764,7 +777,7 @@ def generate_inmessage(
 def generate_post(
     topic: str,
     key_points: str = "",
-    style: str = "thought-leadership") -> dict:
+    style: str = "thought-leadership", api_key: str = "") -> dict:
     """Generate an engaging LinkedIn post with hashtags.
 
     Args:
@@ -772,6 +785,10 @@ def generate_post(
         key_points: Comma-separated key points to include
         style: Post style -- one of: thought-leadership, announcement, question, story
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
@@ -779,7 +796,7 @@ def generate_post(
 
 
 @mcp.tool()
-def analyze_profile(profile_text: str) -> dict:
+def analyze_profile(profile_text: str, api_key: str = "") -> dict:
     """Analyze a LinkedIn profile description to extract actionable outreach insights.
 
     Extracts: industry, seniority level, likely pain points, conversation starters,
@@ -788,6 +805,10 @@ def analyze_profile(profile_text: str) -> dict:
     Args:
         profile_text: The person's LinkedIn headline, summary, or About section text
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
@@ -802,7 +823,7 @@ def generate_outreach_sequence(
     target_title: str = "",
     target_company: str = "",
     target_industry: str = "",
-    goal: str = "") -> dict:
+    goal: str = "", api_key: str = "") -> dict:
     """Generate a 5-touch LinkedIn outreach sequence with timing recommendations.
 
     Sequence: connection request -> value message -> case study -> soft ask -> direct ask.
@@ -815,6 +836,10 @@ def generate_outreach_sequence(
         target_industry: Their industry (auto-detected from title if blank)
         goal: Your outreach goal (e.g. "book a demo", "recruit for senior role")
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
@@ -822,7 +847,7 @@ def generate_outreach_sequence(
 
 
 @mcp.tool()
-def generate_comment(post_content: str) -> dict:
+def generate_comment(post_content: str, api_key: str = "") -> dict:
     """Generate an insightful comment for a LinkedIn post.
 
     Analyzes the post type (question, achievement, opinion, advice, story) and
@@ -831,6 +856,10 @@ def generate_comment(post_content: str) -> dict:
     Args:
         post_content: The text content of the LinkedIn post you want to comment on
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}

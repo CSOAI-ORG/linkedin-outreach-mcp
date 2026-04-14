@@ -1,10 +1,84 @@
 name: linkedin-outreach-mcp
-description: "MEOK AI Labs — AI-powered content generation for LinkedIn outreach. Helps sales teams and"
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/linkedin-outreach-mcp
-license: MIT
-categories: [Sales, Social Media]
-tags: [linkedin, professional-networking, outreach-automation, b2b-sales]
-runtime: python
-entrypoint: server.py
+description: "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Sovereign AI tools for\
+  \ everyone."
+version: 1.0.0
+tools:
+- name: generate_connection_request
+  description: Generate a personalized LinkedIn connection request (max 300 characters).
+  parameters:
+  - name: name
+    type: string
+    required: true
+  - name: title
+    type: string
+    required: false
+  - name: company
+    type: string
+    required: false
+  - name: shared_interests
+    type: string
+    required: false
+  - name: context
+    type: string
+    required: false
+- name: generate_inmessage
+  description: Generate a professional LinkedIn InMail or direct message.
+  parameters:
+  - name: recipient_name
+    type: string
+    required: true
+  - name: recipient_title
+    type: string
+    required: false
+  - name: conversation_context
+    type: string
+    required: false
+  - name: goal
+    type: string
+    required: false
+  - name: tone
+    type: string
+    required: false
+- name: generate_post
+  description: Generate an engaging LinkedIn post with hashtags.
+  parameters:
+  - name: topic
+    type: string
+    required: true
+  - name: key_points
+    type: string
+    required: false
+  - name: style
+    type: string
+    required: false
+- name: analyze_profile
+  description: Analyze a LinkedIn profile description to extract actionable outreach
+    insights.
+  parameters:
+  - name: profile_text
+    type: string
+    required: true
+- name: generate_outreach_sequence
+  description: Generate a 5-touch LinkedIn outreach sequence with timing recommendations.
+  parameters:
+  - name: target_name
+    type: string
+    required: true
+  - name: target_title
+    type: string
+    required: false
+  - name: target_company
+    type: string
+    required: false
+  - name: target_industry
+    type: string
+    required: false
+  - name: goal
+    type: string
+    required: false
+- name: generate_comment
+  description: Generate an insightful comment for a LinkedIn post.
+  parameters:
+  - name: post_content
+    type: string
+    required: true
