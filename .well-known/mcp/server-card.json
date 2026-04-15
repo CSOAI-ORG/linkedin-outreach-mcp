@@ -1,0 +1,61 @@
+{
+  "name": "LinkedIn Outreach MCP",
+  "description": "LinkedIn content generation toolkit for sales teams and recruiters. Generates personalized connection requests, InMails, posts, comments, and multi-touch outreach sequences. Does NOT scrape or automate LinkedIn -- it's a content assistant that helps humans write better messages. By MEOK AI Labs.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/linkedin-outreach-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "generate_connection_request",
+      "description": "Generate a personalized LinkedIn connection request (max 300 characters)."
+    },
+    {
+      "name": "generate_inmessage",
+      "description": "Generate a professional LinkedIn InMail or direct message."
+    },
+    {
+      "name": "generate_post",
+      "description": "Generate an engaging LinkedIn post with hashtags."
+    },
+    {
+      "name": "analyze_profile",
+      "description": "Analyze a LinkedIn profile description to extract actionable outreach insights."
+    },
+    {
+      "name": "generate_outreach_sequence",
+      "description": "Generate a 5-touch LinkedIn outreach sequence with timing recommendations."
+    },
+    {
+      "name": "generate_comment",
+      "description": "Generate an insightful comment for a LinkedIn post."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "Content & Media"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
