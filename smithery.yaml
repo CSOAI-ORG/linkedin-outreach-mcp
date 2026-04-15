@@ -1,5 +1,6 @@
 name: linkedin-outreach-mcp
-description: "\n        "
+description: AI-powered linkedin outreach MCP server for agents. Supports generate
+  connection request, generate inmessage, generate post. By MEOK AI Labs.
 version: 1.0.0
 tools:
 - name: generate_connection_request

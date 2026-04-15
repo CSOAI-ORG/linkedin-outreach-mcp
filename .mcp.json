@@ -1,6 +1,6 @@
 {
   "name": "linkedin-outreach-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 \n        ",
+  "description": "AI-powered linkedin outreach MCP server for agents. Supports generate connection request, generate inmessage, generate post. By MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {
