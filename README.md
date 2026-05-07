@@ -1,3 +1,7 @@
+[![linkedin-outreach-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/linkedin-outreach-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/linkedin-outreach-mcp)
+[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
+[![PyPI](https://img.shields.io/pypi/v/linkedin-outreach-mcp)](https://pypi.org/project/linkedin-outreach-mcp/)
+
 [![linkedin-outreach-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/linkedin-outreach-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/linkedin-outreach-mcp)
 
 <div align="center">
