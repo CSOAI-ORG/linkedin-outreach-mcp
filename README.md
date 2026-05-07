@@ -1,3 +1,5 @@
+[![linkedin-outreach-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/linkedin-outreach-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/linkedin-outreach-mcp)
+
 <div align="center">
 
 [![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/linkedin-outreach-mcp)](https://github.com/CSOAI-ORG/linkedin-outreach-mcp/stargazers)
