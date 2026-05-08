@@ -1,45 +1,60 @@
-[![linkedin-outreach-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/linkedin-outreach-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/linkedin-outreach-mcp)
-[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
-[![PyPI](https://img.shields.io/pypi/v/linkedin-outreach-mcp)](https://pypi.org/project/linkedin-outreach-mcp/)
-
-[![linkedin-outreach-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/linkedin-outreach-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/linkedin-outreach-mcp)
-
 <div align="center">
 
-[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/linkedin-outreach-mcp)](https://github.com/CSOAI-ORG/linkedin-outreach-mcp/stargazers)
+# Linkedin Outreach MCP
 
-# ulinkedinU outreachU mcp
+**MCP server for linkedin outreach mcp operations**
 
-**AI-powered content generation for LinkedIn outreach. Craft personalized connection requests, InMails, posts, comments, and multi-touch outreach sequences for sales teams and recruiters.**
-
-[![npm version](https://img.shields.io/npm/v/@meok-ai/linkedin-outreach-mcp)](https://www.npmjs.com/package/@meok-ai/linkedin-outreach-mcp)
+[![PyPI](https://img.shields.io/pypi/v/meok-linkedin-outreach-mcp)](https://pypi.org/project/meok-linkedin-outreach-mcp/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
-
-[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/linkedin-outreach-mcp/issues)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-MCP_Server-purple)](https://meok.ai)
 
 </div>
 
----
+## Overview
+
+Linkedin Outreach MCP provides AI-powered tools via the Model Context Protocol (MCP).
+
+## Tools
+
+| Tool | Description |
+|------|-------------|
+| `generate_connection_request` | Generate a personalized LinkedIn connection request (max 300 characters). |
+| `generate_inmessage` | Generate a professional LinkedIn InMail or direct message. |
+| `generate_post` | Generate an engaging LinkedIn post with hashtags. |
+| `analyze_profile` | Analyze a LinkedIn profile description to extract actionable outreach insights. |
+| `generate_outreach_sequence` | Generate a 5-touch LinkedIn outreach sequence with timing recommendations. |
+| `generate_comment` | Generate an insightful comment for a LinkedIn post. |
 
 ## Installation
 
 ```bash
-pip install linkedin-outreach-mcp
-# or
-npm install -g @meok-ai/linkedin-outreach-mcp
+pip install meok-linkedin-outreach-mcp
 ```
 
-## Quick Start
+## Usage with Claude Desktop
 
-See the project repository for full documentation and examples.
+Add to your Claude Desktop MCP config (`claude_desktop_config.json`):
 
-## Enterprise Support
+```json
+{
+  "mcpServers": {
+    "linkedin-outreach-mcp": {
+      "command": "python",
+      "args": ["-m", "meok_linkedin_outreach_mcp.server"]
+    }
+  }
+}
+```
 
-- 📧 nicholas@csoai.org
-- 🌐 [CSOAI.org](https://csoai.org)
+## Usage with FastMCP
+
+```python
+from mcp.server.fastmcp import FastMCP
+
+# This server exposes 6 tool(s) via MCP
+# See server.py for full implementation
+```
 
 ## License
 
-MIT © [CSOAI](https://csoai.org)
-<!-- mcp-name: io.github.CSOAI-ORG/linkedin-outreach-mcp -->
+MIT © [MEOK AI Labs](https://meok.ai)
