@@ -1,33 +1,39 @@
-# Linkedin Outreach MCP
-
-> MEOK AI Labs MCP Server
-
-`linkedin-outreach-mcp` is a Model Context Protocol (MCP) server by MEOK AI Labs.
+# linkedin-outreach-mcp
+# **MCP server for linkedin outreach mcp operations**
 
 ## Install
-
 ```bash
 pip install linkedin-outreach-mcp
 ```
 
-Or run without installing:
-
-```bash
-uvx linkedin-outreach-mcp
-```
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
 
 ## Tools
 
-- `generate_connection_request` — Generate a personalized LinkedIn connection request (max 300 characters).
-- `generate_inmessage` — Generate a professional LinkedIn InMail or direct message.
-- `generate_post` — Generate an engaging LinkedIn post with hashtags.
-- `analyze_profile` — Analyze a LinkedIn profile description to extract actionable outreach insights.
-- `generate_outreach_sequence` — Generate a 5-touch LinkedIn outreach sequence with timing recommendations.
-- `generate_comment` — Generate an insightful comment for a LinkedIn post.
+### `generate_connection_request`
+Generate a personalized LinkedIn connection request (max 300 characters).
 
-## Links
+### `generate_inmessage`
+Generate a professional LinkedIn InMail or direct message.
 
-- Source: https://github.com/CSOAI-ORG/linkedin-outreach-mcp
-- PyPI: https://pypi.org/project/linkedin-outreach-mcp/
-- MEOK AI Labs: https://meok.ai
-- Council of AI: https://councilof.ai
+### `generate_post`
+Generate an engaging LinkedIn post with hashtags.
+
+### `analyze_profile`
+Analyze a LinkedIn profile description to extract actionable outreach insights.
+
+### `generate_outreach_sequence`
+Generate a 5-touch LinkedIn outreach sequence with timing recommendations.
+
+### `generate_comment`
+Generate an insightful comment for a LinkedIn post.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

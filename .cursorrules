@@ -1,0 +1,9 @@
+# linkedin-outreach-mcp - Auto-trigger Rules
+
+When the user asks about linkedin outreach, use linkedin-outreach-mcp tools: generate_connection_request, generate_inmessage, generate_post, analyze_profile, generate_outreach_sequence
+
+**MCP server for linkedin outreach mcp operations**
+
+Install: `pip install linkedin-outreach-mcp`
+
+By MEOK AI Labs — MIT licensed.
