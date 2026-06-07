@@ -1,0 +1,24 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "linkedin-outreach-mcp",
+    "description": "Linkedin Outreach MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "linkedin-outreach-mcp"
+      }
+    ],
+    "capabilities": [
+      "generate_connection_request",
+      "generate_inmessage",
+      "generate_post",
+      "analyze_profile",
+      "generate_outreach_sequence",
+      "generate_comment"
+    ]
+  }
+}

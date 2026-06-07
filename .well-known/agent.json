@@ -1,0 +1,77 @@
+{
+  "name": "linkedin-outreach-mcp",
+  "description": "Linkedin Outreach MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/linkedin-outreach-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "generate_connection_request",
+      "name": "Generate Connection Request",
+      "description": "generate_connection_request via linkedin-outreach-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "generate_inmessage",
+      "name": "Generate Inmessage",
+      "description": "generate_inmessage via linkedin-outreach-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "generate_post",
+      "name": "Generate Post",
+      "description": "generate_post via linkedin-outreach-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "analyze_profile",
+      "name": "Analyze Profile",
+      "description": "analyze_profile via linkedin-outreach-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "generate_outreach_sequence",
+      "name": "Generate Outreach Sequence",
+      "description": "generate_outreach_sequence via linkedin-outreach-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "generate_comment",
+      "name": "Generate Comment",
+      "description": "generate_comment via linkedin-outreach-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
