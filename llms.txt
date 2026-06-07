@@ -1,0 +1,33 @@
+# Linkedin Outreach MCP
+
+> MEOK AI Labs MCP Server
+
+`linkedin-outreach-mcp` is a Model Context Protocol (MCP) server by MEOK AI Labs.
+
+## Install
+
+```bash
+pip install linkedin-outreach-mcp
+```
+
+Or run without installing:
+
+```bash
+uvx linkedin-outreach-mcp
+```
+
+## Tools
+
+- `generate_connection_request` — Generate a personalized LinkedIn connection request (max 300 characters).
+- `generate_inmessage` — Generate a professional LinkedIn InMail or direct message.
+- `generate_post` — Generate an engaging LinkedIn post with hashtags.
+- `analyze_profile` — Analyze a LinkedIn profile description to extract actionable outreach insights.
+- `generate_outreach_sequence` — Generate a 5-touch LinkedIn outreach sequence with timing recommendations.
+- `generate_comment` — Generate an insightful comment for a LinkedIn post.
+
+## Links
+
+- Source: https://github.com/CSOAI-ORG/linkedin-outreach-mcp
+- PyPI: https://pypi.org/project/linkedin-outreach-mcp/
+- MEOK AI Labs: https://meok.ai
+- Council of AI: https://councilof.ai
