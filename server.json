@@ -4,9 +4,8 @@
   "version": "1.0.8",
   "description": "Linkedin Outreach MCP Server by MEOK AI Labs",
   "repository": {
-    "type": "git",
     "url": "https://github.com/CSOAI-ORG/linkedin-outreach-mcp",
-    "source": "https://github.com/CSOAI-ORG/linkedin-outreach-mcp"
+    "source": "github"
   },
   "packages": [
     {
