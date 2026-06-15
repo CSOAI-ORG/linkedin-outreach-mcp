@@ -1,4 +1,4 @@
-<!-- mcp-name: CSOAI-ORG/linkedin-outreach-mcp -->
+<!-- mcp-name: io.github.CSOAI-ORG/linkedin-outreach-mcp -->
 [![MCP Scorecard: 86/100](https://img.shields.io/badge/proofof.ai-86%2F100-5b21b6)](https://proofof.ai/scorecard/linkedin-outreach-mcp.html)
 
 # Linkedin Outreach MCP
@@ -138,3 +138,8 @@ Once configured, ask your assistant, for example:
 - "Use `generate_connection_request` to …"
 - "Use `generate_inmessage` to …"
 - "Use `generate_post` to …"
+
+## See also
+
+MEOK compliance MCP fleet:
+[`ci-cd-generator-ai-mcp`](https://github.com/CSOAI-ORG/ci-cd-generator-ai-mcp), [`cli-builder-ai-mcp`](https://github.com/CSOAI-ORG/cli-builder-ai-mcp), [`lorem-ipsum-ai-mcp`](https://github.com/CSOAI-ORG/lorem-ipsum-ai-mcp), [`otp-ai-mcp`](https://github.com/CSOAI-ORG/otp-ai-mcp), [`recruitment-ai-mcp`](https://github.com/CSOAI-ORG/recruitment-ai-mcp)
